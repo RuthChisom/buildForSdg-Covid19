@@ -1,4 +1,4 @@
-let data;
+const data;
 
 const covid19ImpactEstimator = (data) => data;
 
