@@ -2,7 +2,7 @@ const covid19ImpactEstimator = (data) => data;
 // var reportedCases;
 const impact = {};
 const severeImpact = {};
-const timeToElapse;
+const timeToElapse = {};
 const data = covid19ImpactEstimator['data'];
 
 function calcDays(data) {
