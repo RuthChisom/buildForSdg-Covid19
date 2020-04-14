@@ -3,7 +3,7 @@ const covid19ImpactEstimator = (data) => data;
 let impact;
 let severeImpact;
 let timeToElapse;
-const data1 = covid19ImpactEstimator.data;
+const data1 = 25;
 let ratio;
 
 function calcDays() {
