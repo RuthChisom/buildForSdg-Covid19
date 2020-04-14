@@ -1,4 +1,6 @@
 const covid19ImpactEstimator = (data) => data;
+
+export default covid19ImpactEstimator;
 // var reportedCases;
 let impact;
 let severeImpact;
@@ -31,4 +33,4 @@ function calcSevereImpact(data1) {
 
 calcImpact(data);
 calcSevereImpact(data);
-export default covid19ImpactEstimator;
+
