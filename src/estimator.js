@@ -4,6 +4,7 @@ const impact = {};
 const severeImpact = {};
 // const timeToElapse = {};
 const data1 = covid19ImpactEstimator.data;
+var ratio = '';
 
 function calcDays(data1) {
   if (data1.periodType === 'days') timeToElapse = data1.timeToElapse;
@@ -27,6 +28,6 @@ function calcSevereImpact(data1, ratio) {
   return severeImpact;
 }
 
-calcImpact(data1,ratio);
-calcSevereImpact(data1,ratio);
+calcImpact(data1, ratio);
+calcSevereImpact(data1, ratio);
 export default covid19ImpactEstimator;
