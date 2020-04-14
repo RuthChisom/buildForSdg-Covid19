@@ -1,3 +1,5 @@
+let data;
+
 const covid19ImpactEstimator = (data) => data;
 
 export default covid19ImpactEstimator;
@@ -33,4 +35,3 @@ function calcSevereImpact(data1) {
 
 calcImpact(data);
 calcSevereImpact(data);
-
