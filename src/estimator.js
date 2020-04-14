@@ -1,8 +1,8 @@
 const covid19ImpactEstimator = (data) => data;
 // var reportedCases;
-var impact ;
-var severeImpact;
-var timeToElapse;
+let impact ;
+let severeImpact;
+let timeToElapse;
 const data1 = covid19ImpactEstimator.data;
 const ratio = '';
 
