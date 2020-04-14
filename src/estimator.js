@@ -1,31 +1,32 @@
 const covid19ImpactEstimator = (data) => data;
 // var reportedCases;
-var impact = {};
-var severeImpact = {};
+let impact = {};
+let severeImpact = {};
+let timeToElapse;
 
-function calcDays(){
-    if(data.periodType=="days") timeToElapse = data.timeToElapse;
-    else if(data.periodType=="weeks") timeToElapse = data.timeToElapse * 7;
-    else if(data.periodType=="months") timeToElapse = data.timeToElapse * 30;
-    var ratio = math.floor(timeToElapse/3);
+function calcDays (data){
+    if (data.periodType === 'days') timeToElapse = data.timeToElapse;
+    else if (data.periodType === 'weeks') timeToElapse = data.timeToElapse * 7;
+    else if (data.periodType === 'months') timeToElapse = data.timeToElapse * 30;
+    let ratio = math.floor(timeToElapse/3);
     return ratio;
 }
 
-calcDays();
+calcDays(data);
 
-function calcImpact() {
+function calcImpact(data,ratio) {
     impact.currentlyInfected = Math.floor(data.reportedCases * 10);
-    impact.infectionsByRequestedTime = impact.currentlyInfected * Math.pow(2,ratio);
+    impact.infectionsByRequestedTime = impact.currentlyInfected * (2 ** ratio);
     return impact;
 }
 
-function calcSevereImpact(){
+function calcSevereImpact(data,ratio){
     severeImpact.currentlyInfected = Math.floor(data.reportedCases * 10);
-    severeImpact.infectionsByRequestedTime = impact.currentlyInfected * Math.pow(2,ratio);
+    severeImpact.infectionsByRequestedTime = impact.currentlyInfected * (2 ** ratio);
     return severeImpact;
 }
 
 severeImpact. currentlyInfected = Math.floor(reportedCases * 50);
-calcImpact();
-calcSevereImpact();
+calcImpact(data,ratio);
+calcSevereImpact(data,ratio);
 export default covid19ImpactEstimator;
